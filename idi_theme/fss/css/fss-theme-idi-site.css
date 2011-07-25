@@ -1,0 +1,40 @@
+/*
+        IDI
+============================================= 
+ * Layout specifics for IDI theme
+ */
+
+.fl-site-logo { 
+	background-image: url('images/idi_logo.png');
+} 
+
+/* Layout */
+.fl-site-wrapper { 
+    margin: 0 auto;
+    line-height: 150%;
+} 
+ 
+.fl-site-header {
+	width: 100%;
+    height: 8em;
+	border-bottom: 1px solid black;    
+	margin-bottom: 2em;
+}
+
+.fl-site-footer {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Navigation */
+.fl-site-nav-main {}
+
+.fl-site-nav-sub {}
+
+/* Sidebars */
+
+.fl-site-side-info {}
+
+.fl-site-side-links {}
+
+/* FSS Overrides */

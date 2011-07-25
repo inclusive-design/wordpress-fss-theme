@@ -8,6 +8,9 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/fss/css/fss-base-global.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/fss/css/fss-layout.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/fss/css/fss-text.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/fss/css/fss-site.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/fss/css/fss-theme-idi-site.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/fss/css/fss-theme-idi.css" />
  
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -26,10 +29,10 @@
 </head>
 
 <body> 
-<div id="idi-wrapper" class="fl-container-950">
+<div class="fl-theme-idi fl-site-wrapper fl-container-950">
 	<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'content' ); ?>"><?php _e( 'Skip to content', 'content' ); ?></a></div>
 
-	<header>
+	<header class="fl-site-header">
 		<h1 id="site-title" class="fl-force-left"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php bloginfo('template_url'); ?>/images/idi_logo.png" alt="IDI logo" /></a></h1>
 
 		<nav id="main-nav" role="navigation" class="fl-force-right">

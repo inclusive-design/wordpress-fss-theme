@@ -1,0 +1,21 @@
+/* FSS general site styles */
+
+.fl-site-logo { background-repeat: none; }
+
+/* Layout */
+.fl-site-wrapper {} 
+ 
+.fl-site-header {}
+
+.fl-site-footer {}
+
+/* Navigation */
+.fl-site-nav-main {}
+
+.fl-site-nav-sub {}
+
+/* Sidebars */
+
+.fl-site-side-info {}
+
+.fl-site-side-links {}
