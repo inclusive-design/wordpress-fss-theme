@@ -1,0 +1,212 @@
+/*
+Theme Name: IDI Theme
+Theme URI: http://inclusivedesign.ca
+Description: A theme for the Inclusive Design Institute
+Author: Heidi Valles
+Version: 1.0
+*/
+
+/* Layout */
+#idi-wrapper {
+    margin: 0 auto;
+    background: #fff;
+    line-height: 150%;
+    color: #404041;
+}
+ 
+header {
+	width: 100%;
+    height: 8em;
+	border-bottom: 1px solid black;    
+	margin-bottom: 2em;
+}
+ 
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Links */
+a:link, a:visited{
+    color: #2361ae;
+}
+
+.skip-link a:link, .skip-link a:visited {
+	color: #fff;	
+} 
+ 
+a:hover, .skip-link a:hover {
+	color: #2361ae;
+    text-decoration: none;
+}
+
+/* Headings */
+h2 {
+	color: #e31369;
+}
+h3, h4 {
+	color: #2361ae;
+}
+
+/* Main Navigation */
+#main-nav ul {
+	margin: 0px;
+	margin-top: 6em;
+}
+
+#main-nav li {
+	display: inline;
+	margin-left: 15px;
+}
+
+#main-nav a {
+	text-transform: lowercase;
+	font-style: italic;
+	text-decoration: none;
+	color: #000;
+}
+#main-nav a:hover, #main-nav .current-menu-item a, #main-nav .current-page-ancestor a  {
+	color: #2361ae;
+	border-bottom: 3px solid #2361ae;
+	padding-bottom: 7px;	
+}
+
+/* Front page carousel */
+#carousel {
+	background-color: #dde0e1;
+	padding: 10px;
+	border-radius: 10px;
+	margin: 15px 0px;
+}
+
+/* Mailing List / Wiki section */
+#list-wiki {
+	background-color: #f6e935;
+	padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+
+/* Mailing List / Wiki section */
+#research-clusters {
+	background-color: #1f64a9;
+	padding: 10px;
+	border-radius: 10px;
+}
+#research-clusters h3 {
+	color: #d2edf6;
+	margin: 0px;
+}
+#research-clusters ul {
+	margin-left: 0px;
+}
+#research-clusters li {
+	float: left;
+	list-style: none;
+	width:48%;
+}
+#research-clusters a {
+	color: #fff;
+}
+
+/* Footer */
+footer #text-4 p:first-child {
+	font-style: italic;
+}
+
+footer ul#menu-partners li {
+	list-style: none;
+	display: inline;
+	background-image: url('');
+	padding-left: 10px;
+}
+
+/* Submenu sidebar */
+#page-menu ul {
+	margin: 0px;
+}
+
+#page-menu ul li {
+	list-style: none;
+	margin: 0px 10px 15px 0px;
+}
+#page-menu ul li a {
+	padding: 5px;
+	border: 2px solid #fff;	
+}
+
+#page-menu a:hover, #page-menu .current_page_item a {
+	border: 2px solid #2361ae;
+}
+
+/* Info sidebar */
+#sidebar-about {
+	width: 15em;
+	background-color: #f7f389;
+	border-top: 1px solid #b7a632;
+	padding: 5px;
+	margin-top: -3em;
+}
+
+#sidebar-about h3 {
+	color: #404041;
+}
+
+/* Quick Links sidebar */
+#sidebar-quick {
+	width: 15em;
+	background-color: #f3f9fe;
+	border-top: 1px solid #3c6eb6;
+	padding: 5px;
+	margin-top: -3em;
+}
+
+#sidebar-quick h3 {
+	color: #404041;
+}
+
+/* Contact Us sidebar */
+#sidebar-contact {
+	width: 15em;
+	background-color: #f3f9fe;
+	border-top: 1px solid #3c6eb6;
+	padding: 5px;
+	margin-top: -3em;
+}
+
+#sidebar-contact h3 {
+	color: #404041;
+	text-transform: uppercase;
+}
+
+/* Mailing List sidebar */
+#sidebar-list {
+	width: 15em;
+	background-color: #b7a632;
+	padding: 5px;
+	margin-top: -3em;
+}
+
+/* Staff/People page */
+.ppl-person img {
+	border: 1px solid black;
+	width: 100px;
+	height: 150px;
+}
+
+.ppl-person .ppl-title {
+	font-weight: bold;
+}
+
+/* FSS Overrides */
+.fl-col-fixed, .fl-col-flex {
+    padding: 0px;
+}
+
+/* Contact Form 7 Plugin */
+.wpcf7-form input[type="text"] {
+	width: 40%;
+}
+ .wpcf7-form textarea {
+	width: 70%;
+}
