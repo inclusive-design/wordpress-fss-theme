@@ -17,7 +17,9 @@ set_post_thumbnail_size(520, 250, true);
 if ( function_exists('register_sidebar') ) {
 	register_sidebar( array(
 		'name' => __( 'Main Sidebar', 'idi_theme' ),
-		'id' => 'sidebar-1'
+		'id' => 'sidebar-1',
+		'before_widget' => "<div class='sidebar-tweets'>",
+ 		'after_widget' => "</div>"
 	) );
 	
 	register_sidebar( array(

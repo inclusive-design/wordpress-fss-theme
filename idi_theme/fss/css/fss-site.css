@@ -1,6 +1,14 @@
 /* FSS general site styles */
 
-.fl-site-logo { background-repeat: none; }
+.fl-site-logo { 
+	background-repeat: no-repeat; 
+	width: 5em;
+	height: 5em;	
+}
+
+.fl-site-links-skip a {
+}
+
 
 /* Layout */
 .fl-site-wrapper {} 
@@ -9,13 +17,21 @@
 
 .fl-site-footer {}
 
+
 /* Navigation */
 .fl-site-nav-main {}
 
-.fl-site-nav-sub {}
+.fl-site-nav-sub ul {
+	margin: 0px;
+}
+
+
 
 /* Sidebars */
+.fl-site-side-info,
+.fl-site-side-links,
+.fl-site-side-blob { width: 14em; padding: 15px; }
 
-.fl-site-side-info {}
+/* Extras */
 
-.fl-site-side-links {}
+.fl-site-read-more { }

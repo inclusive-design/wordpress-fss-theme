@@ -1,5 +1,14 @@
 <?php get_header(); ?>
-    <div id="blog">
+
+<div class="fl-col-mixed-150">
+	<div class="fl-col-fixed fl-force-right">
+		<?php get_sidebar(); ?>
+		
+		<div class="fl-site-side-blob">
+		
+		</div>
+	</div>
+    <div class="fl-col-flex-left">
         <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
  
         <div class="post">
@@ -7,22 +16,12 @@
  
             <div class="entry">
                 <?php the_post_thumbnail(); ?>
-                <?php the_content(); ?>
- 
-                <p class="postmetadata">
-                <?php _e('Filed under&#58;'); ?> <?php the_category(', ') ?> <?php _e('by'); ?> <?php  the_author(); ?><br />
-                <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?> <?php edit_post_link('Edit', ' &#124; ', ''); ?>
-                </p>
- 
+                <?php the_content(); ?>                
             </div>
         </div>
-<?php endwhile; ?>
- 
-        <div class="navigation">
-        <?php posts_nav_link(); ?>
-        </div>
+		<?php endwhile; ?>
  
         <?php endif; ?>
     </div>
-<?php get_sidebar(); ?>
+</div>
 <?php get_footer(); ?>

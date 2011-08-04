@@ -5,5 +5,9 @@
 	</footer>
 </div>
 
+<script type="text/javascript">
+	idi.init();
+</script>
+
 </body>
 </html>

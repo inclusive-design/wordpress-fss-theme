@@ -6,147 +6,195 @@ Author: Heidi Valles
 Version: 1.0
 */
 
+/* To be used in conjunction with FSS and the FSS IDI theme */
 
-/* Links */
-.skip-link a:link, .skip-link a:visited {
+/* Skip Links */
+.skip-link a:link, 
+.skip-link a:visited {
 	color: #fff;	
 } 
  
-a:hover, .skip-link a:hover {
-	color: #2361ae;
+.skip-link a:hover, 
+.skip-link a:focus {
+	color: #008cbb;
     text-decoration: none;
 }
 
-/* Main Navigation */
-#main-nav ul {
-	margin: 0px;
-	margin-top: 6em;
-}
-
-#main-nav li {
-	display: inline;
-	margin-left: 15px;
-}
-
-#main-nav a {
-	text-transform: lowercase;
-	font-style: italic;
-	text-decoration: none;
-	color: #000;
-}
-#main-nav a:hover, #main-nav .current-menu-item a, #main-nav .current-page-ancestor a  {
-	color: #2361ae;
-	border-bottom: 3px solid #2361ae;
+/* Main Navigation - current item, parent item */
+.fl-site-nav-main .current-menu-item a, 
+.fl-site-nav-main .current-page-ancestor a  {
+	color: #008cbb;
+	border-bottom: 3px solid #008cbb;
 	padding-bottom: 7px;	
 }
 
-/* Front page carousel */
-#carousel {
-	background-color: #dde0e1;
+/* Sub Navigation - current item */
+.fl-site-nav-sub .fl-list-menu li.current_page_item a {
+	border: 2px solid #008cbb;
+}
+
+/* 
+* Front page
+*/
+
+@font-face {
+	font-family: "MPlus";
+	src: url("mplus-2c-light.ttf") format("truetype");
+}
+
+#carousel {	
+	/* fallback */ 
+	background-image: url("images/idi_logo_bg.png");
+	background-repeat: no-repeat;
+	background-position: 100% 0%;
+	
+	/* Safari 4-5, Chrome 1-9 */ 
+	background-image: url("images/idi_logo_bg.png"), -webkit-gradient(linear, left top, right top, from(#ffffff), to(#4c4648)); 
+	/* Safari 5.1, Chrome 10+ */ 
+	background-image: url("images/idi_logo_bg.png"), -webkit-linear-gradient(left, #ffffff, #4c4648); 
+	/* Firefox 3.6+ */ 
+	background-image: url("images/idi_logo_bg.png"), -moz-linear-gradient(left, #ffffff, #4c4648); 
+	/* IE 10 */ 
+	background-image: url("images/idi_logo_bg.png"), -ms-linear-gradient(left, #ffffff, #4c4648); 
+	/* Opera 11.10+ */ 
+	background-image: url("images/idi_logo_bg.png"), -o-linear-gradient(left, #ffffff, #4c4648);
+
+	height: 220px;
 	padding: 10px;
 	border-radius: 10px;
-	margin: 15px 0px;
+	margin-bottom: 15px;	
+}
+
+#carousel h1, #carousel h2 {
+	color: #000;
+	font-family: "MPlus";	
+}
+#carousel h1 {
+	font-size: 3em;
+	font-weight:bolder;
+}
+#carousel h2 {
+	font-size: 3em;
+	line-height: 150%;
+	font-weight: normal;
+	width: 60%;
+	margin-top: 0.5em;
+	color: #404041;
+}
+
+#carousel a.check-out {
+	color: #fff;
+	background-color: #008cbb;
+	border-radius: 5px;
+	-webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.7);
+	-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.7);
+	box-shadow:0 0 5px rgba(0, 0, 0, 0.7);		
+	padding: 10px 25px 10px 10px;
+	background-image: url("images/arrow_sm_white_right.png");
+	background-repeat: no-repeat;
+	background-position: 96% 50%;	
 }
 
 /* Mailing List / Wiki section */
 #list-wiki {
-	background-color: #f6e935;
+	/* fallback */ 
+	background-color: #11a2c6;
+
+	/* Safari 4-5, Chrome 1-9 */ 
+	background: -webkit-gradient(linear, left top, right top, from(#11a2c6), to(#0c7e9a)); 
+	/* Safari 5.1, Chrome 10+ */ 
+	background: -webkit-linear-gradient(left, #11a2c6, #0c7e9a); 
+	/* Firefox 3.6+ */ 
+	background: -moz-linear-gradient(left, #11a2c6, #0c7e9a); 
+	/* IE 10 */ 
+	background: -ms-linear-gradient(left, #11a2c6, #0c7e9a); 
+	/* Opera 11.10+ */ 
+	background: -o-linear-gradient(left, #11a2c6, #0c7e9a);		
+
 	padding: 10px;
 	border-radius: 10px;
 	margin-bottom: 15px;
 }
+#list-wiki p, #list-wiki h2, #list-wiki a {
+	color: #fff;
+}
 
-/* Mailing List / Wiki section */
+#list-wiki a {
+	background-image: url("images/arrow_sm_white_right.png");
+	background-repeat: no-repeat;
+	background-position: 96% 50%;	
+	padding-right: 25px;
+}
+
+/* Research menu */
 #research-clusters {
-	background-color: #1f64a9;
+	/* fallback */ 
+	background-color: #5e5f61;
+
+	/* Safari 4-5, Chrome 1-9 */ 
+	background: -webkit-gradient(linear, left top, right top, from(#58595b), to(#939598)); 
+	/* Safari 5.1, Chrome 10+ */ 
+	background: -webkit-linear-gradient(left, #58595b, #939598); 
+	/* Firefox 3.6+ */ 
+	background: -moz-linear-gradient(left, #58595b, #939598); 
+	/* IE 10 */ 
+	background: -ms-linear-gradient(left, #58595b, #939598); 
+	/* Opera 11.10+ */ 
+	background: -o-linear-gradient(left, #58595b, #939598);		
+	
 	padding: 10px;
 	border-radius: 10px;
+	line-height: 2em;
 }
 #research-clusters h3 {
 	color: #d2edf6;
 	margin: 0px;
 }
 #research-clusters ul {
-	margin-left: 0px;
+	margin: 0px;
 }
 #research-clusters li {
 	float: left;
 	list-style: none;
-	width:48%;
+	width:47%;	
 }
 #research-clusters a {
 	color: #fff;
+	padding-right: 25px;
+	background-image: url("images/arrow_sm_white_right.png");
+	background-repeat: no-repeat;
+	background-position: 98% 50%;		
 }
 
-/* Footer */
-footer #text-4 p:first-child {
+/* Footer Widgets */
+.fl-site-footer #text-4 p:first-child {
 	font-style: italic;
 }
 
-footer ul#menu-partners li {
+.fl-site-footer ul#menu-partners li {
 	list-style: none;
 	display: inline;
-	background-image: url('');
+	background-image: url('images/bullet.png');
+	background-repeat: no-repeat;
+	background-position: 0% 50%;
 	padding-left: 10px;
 }
+.fl-site-footer ul#menu-partners li:first-child { background-image: none; }
 
-/* Submenu sidebar */
-#page-menu ul {
-	margin: 0px;
-}
-
-#page-menu ul li {
-	list-style: none;
-	margin: 0px 10px 15px 0px;
-}
-#page-menu ul li a {
-	padding: 5px;
-	border: 2px solid #fff;	
+/* Twitter widget */
+.sidebar-tweets h2 {
+	background-image: url("images/twitter_bird.png");
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+	display: inline-block;
+	padding-right: 30px;
 }
 
-#page-menu a:hover, #page-menu .current_page_item a {
-	border: 2px solid #2361ae;
+.sidebar-tweets .tweet-date {
+	color: #000;
+	text-decoration: none;
 }
 
-/* Info sidebar */
-#sidebar-about {
-	width: 15em;
-	background-color: #f7f389;
-	border-top: 1px solid #b7a632;
-	padding: 5px;
-	margin-top: -3em;
-}
-
-#sidebar-about h3 {
-	color: #404041;
-}
-
-/* Quick Links sidebar */
-#sidebar-quick {
-	width: 15em;
-	background-color: #f3f9fe;
-	border-top: 1px solid #3c6eb6;
-	padding: 5px;
-	margin-top: -3em;
-}
-
-#sidebar-quick h3 {
-	color: #404041;
-}
-
-/* Contact Us sidebar */
-#sidebar-contact {
-	width: 15em;
-	background-color: #f3f9fe;
-	border-top: 1px solid #3c6eb6;
-	padding: 5px;
-	margin-top: -3em;
-}
-
-#sidebar-contact h3 {
-	color: #404041;
-	text-transform: uppercase;
-}
 
 /* Mailing List sidebar */
 #sidebar-list {
@@ -167,11 +215,6 @@ footer ul#menu-partners li {
 	font-weight: bold;
 }
 
-/* FSS Overrides */
-.fl-col-fixed, .fl-col-flex {
-    padding: 0px;
-}
-
 /* Contact Form 7 Plugin */
 .wpcf7-form input[type="text"] {
 	width: 40%;
@@ -179,3 +222,6 @@ footer ul#menu-partners li {
  .wpcf7-form textarea {
 	width: 70%;
 }
+
+/* Twitter Feed */
+#text-5 ul { margin-left: 0px; }

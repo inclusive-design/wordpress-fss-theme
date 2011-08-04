@@ -6,30 +6,50 @@
 		if ($children) {
 			wp_redirect(get_permalink($children[0]->ID));	
 		}
-		
-		/*$my_subpage = new WP_Query( array('post_type' => 'page', 'post_parent' => $post->ID, 'post_status' => 'publish', 'orderby' => 'menu_order', 'order' => 'ASC'));
-		if($my_subpage->have_posts())
-			$my_subpage->the_post();        			*/
 	} else {
-		$subpages = wp_list_pages('sort_column=menu_order&title_li=&child_of='.$post->post_parent.'&echo=0');				
+		$submenu = wp_list_pages('sort_column=menu_order&title_li=&child_of='.$post->post_parent.'&echo=0');				
 	}
+	
+	/* Right info sidebar options */
+	$sboptions = array(
+     'order' => 'title-content-widgets', 
+     'before_title' => '<h3>', 
+     'after_title' => '</h3>', 
+     'before_content' => '',  
+     'after_content' => ''); 
+     $sidebar = coresidebar($sboptions);
+     
+     /* Behaviour of middle div */
+   	$middle_classes = "";
+	if (!empty($submenu)) { 
+     	$middle_classes = "fl-col-flex";
+	} 
+	if (!empty($sidebar)) {      	
+     	$middle_classes .= " fl-col-flex-left";
+	}
+     	
 ?>
 <?php get_header(); ?>
 
-<?php if ($subpages) { ?>
 <div class="fl-col-mixed-150">
-	<nav id="page-menu" class="fl-force-left fl-col-fixed">
-		<?php echo '<ul>'.$subpages.'</ul>'; ?>
-	</nav>
-	<div class="fl-col-flex">
-<?php } ?>
-
-<div class="post">
-	<h2><?php the_title(); ?></h2>
-	<?php the_content(); ?>
-</div>
- 
-<?php if ($subpages) { echo "</div></div>"; } ?>	
+	<?php if (!empty($submenu)) { ?>
+		<nav class="fl-site-nav-sub fl-col-fixed fl-force-left">
+			<?php echo '<ul class="fl-list-menu">'.$submenu.'</ul>'; ?>
+		</nav>
+	<?php } ?>
 	
+	<?php if (!empty($sidebar)) { ?>		
+		<div class="fl-col-fixed fl-force-right">
+			<?php echo $sidebar; ?>
+		</div>
+	<?php } ?>
+	
+	
+	<div class="<?php echo $middle_classes; ?>">
+		<h2><?php the_title(); ?></h2>
+		<?php the_content(); ?>	 
+	</div>
+</div>
+
 <?php endif; ?>
 <?php get_footer(); ?>

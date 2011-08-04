@@ -3,9 +3,8 @@
 =============================================
  * Color Scheme:
  *     	pink: #E31369
- *		blue: #2361ae
- *		yellow: #f6e935
- *		dk grey: #404041 (text)
+ *		blue: #008cbb
+ *		dk grey: #231f20 (text)
  *		lt grey: #dde0e1
  */
  
@@ -13,25 +12,35 @@
  * General Styling
  */
 
-.fl-theme-idi {color:#404041; background-color:#ffffff;}
+.fl-theme-idi {color:#231f20; background-color:#ffffff;}
   
 /* Divs, inputs */
-.fl-theme-idi div, .fl-theme-idi input {color:#404041; border-color:#404041;}
+.fl-theme-idi div, .fl-theme-idi input {color:#231f20; border-color:#231f20;}
+.fl-theme-idi input { 
+	padding: 5px; 
+	border: none; 
+}
+.fl-theme-idi input[type=submit] { 
+	font-weight: bold;
+	border-radius: 5px;	
+}
 
 /* Links */
-.fl-theme-idi a  {color: #2361ae;}
+.fl-theme-idi a  {color: #008cbb;}
+.fl-theme-idi a:hover { color: #008cbb; text-decoration: none; }
+
 
 /* Headers */
-.fl-theme-idi h1, .fl-theme-idi h2 { color: #e31369; }
-
+.fl-theme-idi h1, 
+.fl-theme-idi h2,
 .fl-theme-idi h3,
 .fl-theme-idi h4,
 .fl-theme-idi h5,
-.fl-theme-idi h6 {color:#2361ae;}
+.fl-theme-idi h6 {color:#008cbb;}
 
 /* Tables */
-.fl-theme-idi th {border:0.1em solid #404041; background-color:#404041; color:#fff;}
-.fl-theme-idi td {border:0.1em solid #404041;}
+.fl-theme-idi th {border:0.1em solid #231f20; background-color:#231f20; color:#fff;}
+.fl-theme-idi td {border:0.1em solid #231f20;}
 
 /* 
  * FSS Elements
@@ -43,21 +52,20 @@
 .fl-theme-idi.fl-focus :focus,
 .fl-theme-idi .selectable {outline: 0.2em solid #F00;}
 
-.fl-theme-idi .fl-knockout {background:transparent !important; color:#404041;} /* Deprecated: use .fl-noBackgroundImages */
 
 /* Icons */
 .fl-theme-idi .fl-icon {background-color:#fff;}
 
 /* Tabs */
-.fl-theme-idi .fl-tabs {border-bottom-color:#404041;}
+.fl-theme-idi .fl-tabs {border-bottom-color:#231f20;}
 .fl-theme-idi .fl-tabs li,
-.fl-theme-idi .fl-tabs li * {border-color:#404041; border-bottom-color:#404041; }
-.fl-theme-idi .fl-tabs li {background-color:#404041;}
-.fl-theme-idi .fl-tabs li * {color:#fff; font-weight:bold; background-color:#404041;text-decoration:none;}
+.fl-theme-idi .fl-tabs li * {border-color:#231f20; border-bottom-color:#231f20; }
+.fl-theme-idi .fl-tabs li {background-color:#231f20;}
+.fl-theme-idi .fl-tabs li * {color:#fff; font-weight:bold; background-color:#231f20;text-decoration:none;}
 
 .fl-theme-idi .fl-tabs li:hover,
 .fl-theme-idi .fl-tabs li:hover *,
-.fl-theme-idi .fl-tabs li a:hover {color:#404041; background-color:#fff;}
+.fl-theme-idi .fl-tabs li a:hover {color:#231f20; background-color:#fff;}
 
 .fl-theme-idi .fl-tabs li.fl-tabs-active,
 .fl-theme-idi .fl-tabs li.fl-tabs-active a,
@@ -66,34 +74,42 @@
 .fl-theme-idi .fl-tabs li.fl-activeTab,
 .fl-theme-idi .fl-tabs li.fl-activeTab:hover,
 .fl-theme-idi .fl-tabs li.fl-activeTab a,
-.fl-theme-idi .fl-tabs li.fl-activeTab a:hover {background-color: #fff; border-bottom-color:#fff; color:#404041;}
-.fl-theme-idi .fl-tab-content {background-color:#ffffff; color:#404041;}
+.fl-theme-idi .fl-tabs li.fl-activeTab a:hover {background-color: #fff; border-bottom-color:#fff; color:#231f20;}
+.fl-theme-idi .fl-tab-content {background-color:#ffffff; color:#231f20;}
 
-/* Menu */
-.fl-theme-idi .fl-listmenu, 
-.fl-theme-idi .fl-list-menu {border:1px solid #404041; border-bottom-width:2px; background-color:#fff;}
-.fl-theme-idi .fl-listmenu li, 
-.fl-theme-idi .fl-list-menu li,
-.fl-theme-idi .fl-listmenu li a, 
-.fl-theme-idi .fl-list-menu li a {font-weight:bold; color:#404041; background-color:#ffffff; border-color:#404041; text-decoration:none;}
-.fl-theme-idi .fl-listmenu a:hover, 
-.fl-theme-idi .fl-list-menu a:hover {background-color:#404041; color: #ffffff;}
-.fl-theme-idi .fl-listmenu .fl-activemenu a, 
-.fl-theme-idi .fl-list-menu .fl-activemenu a,
-.fl-theme-idi .fl-listmenu .fl-activemenu a:hover, 
-.fl-theme-idi .fl-list-menu .fl-activemenu a:hover { background-color: #404041; border-bottom-color:#fff; color:#ffffff;}
+/* Menu  (Our sub navigation is an fl-list-menu) */
+.fl-theme-idi .fl-list-menu {
+	border: none;
+}
+
+.fl-theme-idi .fl-list-menu li { 	
+	border-bottom: inherit;
+	border-style: inherit;
+	margin-bottom: 15px;
+}
+
+.fl-theme-idi .fl-list-menu li a {
+	padding: 5px;
+	border: 2px solid #fff;
+	text-decoration: none;
+}
+
+.fl-theme-idi .fl-list-menu a:hover {
+	border: 2px solid #008cbb;
+}
+
 
 /* Buttons */
 .fl-theme-idi .fl-button-left,
-.fl-theme-idi .fl-button-right {color:#404041; background-color:#ffffff;}
+.fl-theme-idi .fl-button-right {color:#231f20; background-color:#ffffff;}
 .fl-theme-idi .fl-button-left,
 .fl-theme-idi .fl-button-right {background-image:url('../images/themes/hc/buttons-med-cap.png');}
 .fl-theme-idi .fl-button-inner {background-image:url('../images/themes/hc/buttons-med-bg.png');}
 
 /* Widgets */
-.fl-theme-idi .fl-widget {background-color:#404041; border:1px solid #fff;}
+.fl-theme-idi .fl-widget {background-color:#231f20; border:1px solid #fff;}
 .fl-theme-idi .fl-widget h2 {display:inline;}
-.fl-theme-idi .fl-widget a {color:#404041;}
+.fl-theme-idi .fl-widget a {color:#231f20;}
 .fl-theme-idi .fl-widget .fl-icon-more {background-image:url('../images/themes/hc/icon-widget-More.png'); margin-left:0px;}
 .fl-theme-idi .fl-widget .fl-icon-close {background-image:url('../images/themes/hc/icon-widget-Close.png'); margin-right:0px;}
         
@@ -104,7 +120,7 @@
 .fl-theme-idi .fl-widget-titlebar .icon {background-position:center center;}
 .fl-theme-idi .fl-widget-titlebar .fl-button-right,
 .fl-theme-idi .fl-widget-titlebar .fl-button-left {
-    color:#404041;
+    color:#231f20;
     background-image:url('../images/themes/hc/buttons-titlebar-cap.png');
     text-decoration:none;
 }
@@ -122,13 +138,19 @@
 /* 
  * Infusion Components
  */
- 
+
 /* Progress */
-.fl-theme-idi .fl-progress-bounds {border-color:#404041; background-color:#fff;}
-.fl-theme-idi .fl-progress-fill {color:#fff; background-color:#404041;}
+.fl-theme-idi .fl-progress-bounds {border-color:#231f20; background-color:#fff;}
+.fl-theme-idi .fl-progress-fill {color:#fff; background-color:#231f20;}
 
 /* Reorderer */
 .fl-theme-idi .fl-reorderer-dropMarker {background-color:#f00;}
 
 /* Inline edit */
-.fl-theme-idi .fl-inlineEdit-edit {background-color:#404041; color:#fff; border: 0.1em solid #fff; padding:0.1em; margin:-0.1em;}
+.fl-theme-idi .fl-inlineEdit-edit {background-color:#231f20; color:#fff; border: 0.1em solid #fff; padding:0.1em; margin:-0.1em;}
+
+
+/* EXTRAS: to be added to FSS? */
+.fl-text-uppercase { text-transform: uppercase; }
+.fl-text-lowercase { text-transform: lowercase; }
+.fl-text-smaller {font-size: 90%;}
