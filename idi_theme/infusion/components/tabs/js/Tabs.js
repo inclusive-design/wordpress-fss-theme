@@ -1,0 +1,1 @@
+var fluid_1_4=fluid_1_4||{};(function($,fluid){fluid.defaults("fluid.tabs",{gradeNames:["fluid.viewComponent","autoInit"],tabOptions:{},finalInitFunction:"fluid.tabs.finalInit"});fluid.tabs.finalInit=function(that){that.container.tabs(that.options.tabOptions)}})(jQuery,fluid_1_4);
