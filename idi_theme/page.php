@@ -17,7 +17,7 @@
      'after_title' => '</h3>', 
      'before_content' => '',  
      'after_content' => ''); 
-     $sidebar = coresidebar($sboptions);
+     $sidebar = trim(coresidebar($sboptions));
      
      /* Behaviour of middle div */
    	$middle_classes = "";
@@ -31,7 +31,7 @@
 ?>
 <?php get_header(); ?>
 
-<div class="fl-col-mixed-150">
+<div class="fl-col-mixed-200">
 	<?php if (!empty($submenu)) { ?>
 		<nav class="fl-site-nav-sub fl-col-fixed fl-force-left">
 			<?php echo '<ul class="fl-list-menu">'.$submenu.'</ul>'; ?>
@@ -39,13 +39,12 @@
 	<?php } ?>
 	
 	<?php if (!empty($sidebar)) { ?>		
-		<div class="fl-col-fixed fl-force-right">
+		<div class="fl-site-sidebar fl-col-fixed fl-force-right">
 			<?php echo $sidebar; ?>
 		</div>
 	<?php } ?>
-	
-	
-	<div class="<?php echo $middle_classes; ?>">
+		
+	<div class="fl-site-content <?php echo $middle_classes; ?>">
 		<h2><?php the_title(); ?></h2>
 		<?php the_content(); ?>	 
 	</div>

@@ -8,24 +8,13 @@ Version: 1.0
 
 /* To be used in conjunction with FSS and the FSS IDI theme */
 
-/* Skip Links */
-.skip-link a:link, 
-.skip-link a:visited {
-	color: #fff;	
-} 
- 
-.skip-link a:hover, 
-.skip-link a:focus {
-	color: #008cbb;
-    text-decoration: none;
-}
 
 /* Main Navigation - current item, parent item */
 .fl-site-nav-main .current-menu-item a, 
 .fl-site-nav-main .current-page-ancestor a  {
 	color: #008cbb;
 	border-bottom: 3px solid #008cbb;
-	padding-bottom: 7px;	
+	padding-bottom: 9px;	
 }
 
 /* Sub Navigation - current item */
@@ -59,10 +48,10 @@ Version: 1.0
 	/* Opera 11.10+ */ 
 	background-image: url("images/idi_logo_bg.png"), -o-linear-gradient(left, #ffffff, #4c4648);
 
-	height: 220px;
-	padding: 10px;
+	height: 13.9em;
+	padding: 0 20px;
 	border-radius: 10px;
-	margin-bottom: 15px;	
+	margin-bottom: 10px;	
 }
 
 #carousel h1, #carousel h2 {
@@ -77,8 +66,9 @@ Version: 1.0
 	font-size: 3em;
 	line-height: 150%;
 	font-weight: normal;
-	width: 60%;
-	margin-top: 0.5em;
+	width: 70%;
+	height: 2.8em;
+	margin-top: 0;
 	color: #404041;
 }
 
@@ -86,13 +76,14 @@ Version: 1.0
 	color: #fff;
 	background-color: #008cbb;
 	border-radius: 5px;
-	-webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.7);
-	-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.7);
-	box-shadow:0 0 5px rgba(0, 0, 0, 0.7);		
+	-webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);
+	box-shadow:0 0 5px rgba(0, 0, 0, 0.4);		
 	padding: 10px 25px 10px 10px;
 	background-image: url("images/arrow_sm_white_right.png");
 	background-repeat: no-repeat;
 	background-position: 96% 50%;	
+	text-decoration: none;
 }
 
 /* Mailing List / Wiki section */
@@ -111,15 +102,16 @@ Version: 1.0
 	/* Opera 11.10+ */ 
 	background: -o-linear-gradient(left, #11a2c6, #0c7e9a);		
 
-	padding: 10px;
+	padding: 0px 20px;
 	border-radius: 10px;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 #list-wiki p, #list-wiki h2, #list-wiki a {
 	color: #fff;
+	font-weight:normal;	
 }
 
-#list-wiki a {
+#list-wiki p a {
 	background-image: url("images/arrow_sm_white_right.png");
 	background-repeat: no-repeat;
 	background-position: 96% 50%;	
@@ -142,13 +134,14 @@ Version: 1.0
 	/* Opera 11.10+ */ 
 	background: -o-linear-gradient(left, #58595b, #939598);		
 	
-	padding: 10px;
+	padding: 10px 20px;
 	border-radius: 10px;
 	line-height: 2em;
 }
-#research-clusters h3 {
+#research-clusters h2 {
 	color: #d2edf6;
 	margin: 0px;
+	font-weight:normal;	
 }
 #research-clusters ul {
 	margin: 0px;
@@ -158,7 +151,7 @@ Version: 1.0
 	list-style: none;
 	width:47%;	
 }
-#research-clusters a {
+#research-clusters li a {
 	color: #fff;
 	padding-right: 25px;
 	background-image: url("images/arrow_sm_white_right.png");
@@ -181,6 +174,14 @@ Version: 1.0
 }
 .fl-site-footer ul#menu-partners li:first-child { background-image: none; }
 
+/* columns */
+
+.front-cols .fl-col {
+	width: 31.75%;
+	margin-left: 0.5%;
+    margin-right: 0.5%;  
+}
+
 /* Twitter widget */
 .sidebar-tweets h2 {
 	background-image: url("images/twitter_bird.png");
@@ -188,10 +189,15 @@ Version: 1.0
 	background-position: 100% 50%;
 	display: inline-block;
 	padding-right: 30px;
+	color: #000;
+	font-weight: normal;
 }
 
+.sidebar-tweets ul {
+	margin-left: 0px;
+}
 .sidebar-tweets .tweet-date {
-	color: #000;
+	color: #58595b;
 	text-decoration: none;
 }
 
@@ -218,10 +224,23 @@ Version: 1.0
 /* Contact Form 7 Plugin */
 .wpcf7-form input[type="text"] {
 	width: 40%;
+	border: 1px solid #008CBB;
 }
  .wpcf7-form textarea {
 	width: 70%;
+	border: 1px solid #008CBB;	
 }
 
 /* Twitter Feed */
 #text-5 ul { margin-left: 0px; }
+
+/* News */
+.post h2, .post h3 {
+	margin-bottom: 0.3em;
+}
+.post .date {
+	font-weight:bold;
+	padding-bottom: 1em;
+}
+
+ol ol li { list-style-type: lower-alpha; }

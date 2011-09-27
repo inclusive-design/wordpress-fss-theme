@@ -16,7 +16,8 @@ https://github.com/fluid-project/infusion/raw/master/Infusion-LICENSE.txt
 /*jslint white: true, funcinvoke: true, undef: true, newcap: true, nomen: true, regexp: true, bitwise: true, browser: true, forin: true, maxerr: 100, indent: 4 */
 var idi = idi || {};
 (function ($) {
-    fluid.demands("fluid.uiOptions.templatePath", "fluid.fatPanelUIOptions", {
+
+/*    fluid.demands("fluid.uiOptions.templatePath", "fluid.fatPanelUIOptions", {
         options: {
             value: "{fatPanelUIOptions}.options.prefix"
         }
@@ -25,7 +26,7 @@ var idi = idi || {};
     fluid.demands("fluid.renderIframe", ["fluid.fatPanelUIOptions"], {
         options: {
             markupProps: {
-                src: "wp-content/themes/idi_theme/webapp/components/uiOptions/html/FatPanelUIOptionsFrame.html"
+                src: "http://dev.inclusivedesign.ca/wordpress/wp-content/themes/idi_theme/webapp/components/uiOptions/html/FatPanelUIOptionsFrame.html"
             }
         }
     });
@@ -36,16 +37,20 @@ var idi = idi || {};
             resources: {
                 template: {
                     forceCache: true,
-                    url: "wp-content/themes/idi_theme/webapp/components/tableOfContents/html/TableOfContents.html"
+                    url: "http://dev.inclusivedesign.ca/wordpress/wp-content/themes/idi_theme/webapp/components/tableOfContents/html/TableOfContents.html"
                 }
             }
         }
-    });
+    });*/
 
-    idi.init = function () {
-        fluid.pageEnhancer();
-        fluid.fatPanelUIOptions(".flc-uiOptions-fatPanel", {
-            prefix: "wp-content/themes/idi_theme/webapp/components/uiOptions/html/"
-        });
+    idi.init = function () {        
+		fluid.pageEnhancer({
+			//tocTemplate: "<?php bloginfo('template_url'); ?>/infusion/components/tableOfContents/html/TableOfContents.html"
+			tocTemplate: "http://dev.inclusivedesign.ca/wordpress/wp-content/themes/idi_theme/infusion/components/tableOfContents/html/TableOfContents.html"
+		});
+
+		fluid.uiOptions.fatPanel(".flc-uiOptions-fatPanel", {
+            prefix: "http://dev.inclusivedesign.ca/wordpress/wp-content/themes/idi_theme/infusion/components/uiOptions/html/"			
+		});          
     };
 })(jQuery);
