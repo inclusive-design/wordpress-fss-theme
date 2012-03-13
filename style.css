@@ -1,0 +1,27 @@
+/*
+Theme Name: Wordpress FSS Theme
+Description: A general Wordpress theme using FSS and incorporating User Interface Options
+Author: Heidi Valles, Anastasia Cheetham
+Version: 1.0
+*/
+
+.fl-site-logo {
+    background-repeat: no-repeat;
+    background-image: url('images/fluid_66x40_rgb_transparentBkg_bw-PlainBlack.png');
+    width: 66px;
+    height: 40px;
+}
+.fl-site-skipto a:link, .fl-site-skipto a:visited {
+    color: #FFFFFF;
+    float: left;
+}
+
+.fl-site-footer {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.menu ul li {
+    display: inline;
+    padding: 0 0.5em;
+}
