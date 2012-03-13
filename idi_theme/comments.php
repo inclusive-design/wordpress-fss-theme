@@ -1,1 +1,0 @@
-<?php comment_form(); ?>
