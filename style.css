@@ -10,6 +10,8 @@ Version: 1.0
     background-image: url('images/fluid_66x40_rgb_transparentBkg_bw-PlainBlack.png');
     width: 66px;
     height: 40px;
+    display: inline;
+    float: left;
 }
 .fl-site-skipto a:link, .fl-site-skipto a:visited {
     color: #FFFFFF;
@@ -17,11 +19,14 @@ Version: 1.0
 }
 
 .fl-site-footer {
-    margin-top: 1em;
+    margin:  1em 0;
     text-align: center;
 }
 
-.menu ul li {
+.fl-site-nav-main {
+    float: right;
+}
+.fl-site-nav-main ul li {
     display: inline;
     padding: 0 0.5em;
 }

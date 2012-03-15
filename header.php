@@ -32,6 +32,11 @@
 		<script type="text/javascript">document.createElement("nav")</script>		
 		<script type="text/javascript">document.createElement("footer")</script>		
 	<![endif]-->	
+
+<?php
+	wp_head();
+?>
+
 </head>
 
 <body> 
