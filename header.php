@@ -46,9 +46,7 @@
 		<div id="myUIOptions" class="flc-slidingPanel-panel flc-uiOptions-iframe"></div>     
 		
 		<div class="fl-panelBar">
-			<div class="fl-container-950 fl-centered">
-				<button class="flc-slidingPanel-toggleButton fl-toggleButton">Show/Hide</button>
-			</div>
+			<button class="flc-slidingPanel-toggleButton fl-toggleButton">Show/Hide</button>
 		</div>
 	</div>
 	<!-- end markup for UI Options Fat Panel -->
@@ -82,9 +80,9 @@
 	</div>
 
 	<!-- The main container of all content -->
-	<div class="fl-container-950 fl-centered fl-push">
+	<div class="fl-container fl-centered">
 
-		<header class="fl-site-header">
+		<header class="fl-site-header fl-clearfix">
 			<!-- Loads the file "banner.php". Feel free to override with your own banner, or with an empty file -->
 			<?php get_template_part('banner') ?>
 
@@ -92,4 +90,4 @@
 			<?php get_template_part('topnav') ?>
 	    </header>  
 		
-		<div id="content" class="fl-push fl-clearfix">
+	    <section id="content" class="fl-site-main-body">

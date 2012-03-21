@@ -5,6 +5,11 @@ Author: Heidi Valles, Anastasia Cheetham
 Version: 1.0
 */
 
+.fl-site-wrapper {
+    min-width: 800px;
+    max-width: 1280px;
+}
+
 .fl-site-logo {
     background-repeat: no-repeat;
     background-image: url('images/fluid_66x40_rgb_transparentBkg_bw-PlainBlack.png');
@@ -18,6 +23,12 @@ Version: 1.0
     float: left;
 }
 
+.fl-site-header {
+    min-width: 800px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .fl-site-footer {
     margin:  1em 0;
     text-align: center;
@@ -29,4 +40,8 @@ Version: 1.0
 .fl-site-nav-main ul li {
     display: inline;
     padding: 0 0.5em;
+}
+
+.fl-uiOptions-fatPanel .fl-panelBar {
+    position: relative;
 }

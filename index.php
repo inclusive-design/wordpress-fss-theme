@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="fl-col-mixed-200">
+<div class="fl-centered fl-col-mixed-200 fl-site-wrapper">
 	<div class="fl-col-fixed fl-force-right">
 		<?php get_sidebar(); ?>
 	</div>
