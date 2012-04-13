@@ -51,8 +51,7 @@
 	</div>
 	<!-- end markup for UI Options Fat Panel -->
 
-	<!-- Container for Table of Contents inserted at request of UI Options -->
-	<div class="flc-toc-tocContainer toc"> </div>
+	<?php get_template_part('top-buttons') ?>
 
 	<script type="text/javascript">
 		fluid.pageEnhancer({
@@ -91,3 +90,6 @@
 	    </header>  
 		
 	    <section id="content" class="fl-site-main-body">
+			<!-- Container for Table of Contents inserted at request of UI Options -->
+			<div class="flc-toc-tocContainer toc"> </div>
+
