@@ -1,7 +1,10 @@
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-				<h1 class="fl-site-logo">
+				<div class="fl-site-logo">
 					<span class="fl-hidden-accessible">
 						<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>
 					</span>
-				</h1>
+				</div>
+				<div class="fl-site-name">
+					<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>
+				</div>
 			</a>

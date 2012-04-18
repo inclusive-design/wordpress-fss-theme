@@ -15,8 +15,6 @@ Version: 1.0
     background-image: url('images/fluid_66x40_rgb_transparentBkg_bw-PlainBlack.png');
     width: 66px;
     height: 40px;
-    display: inline;
-    float: left;
 }
 .fl-site-skipto a:link, .fl-site-skipto a:visited {
     color: #FFFFFF;
