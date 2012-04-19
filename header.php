@@ -56,8 +56,14 @@
 				options: {
 					strings: {
 						//showText: "Display Settings <img src='<?php bloginfo('template_url'); ?>/images/triangle_down_white.png' alt='down arrow' />",
-						showText: "Show Display Settings",
-						hideText: "Hide Display Settings"
+						<?php global $uio_strings, $uio_strings_custom;
+							// To override the default strings, define $uio_strings_custom
+							//in the child theme's functions.php file
+							if ($uio_strings_custom) {
+								echo $uio_strings_custom;
+							} else {
+								echo $uio_strings; 
+							}?>
 					}
 				}
 			}
