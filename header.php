@@ -22,15 +22,19 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/infusion/lib/jquery/ui/css/fl-theme-by/by.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/infusion/lib/jquery/ui/css/fl-theme-yb/yb.css" />	
 
-
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/style-ltie9.css" />
+	<![endif]-->
 
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/infusion/MyInfusion.js"></script>
 
 	<!--[if lte IE 8]>	
 		<script type="text/javascript">document.createElement("header")</script>	
 		<script type="text/javascript">document.createElement("nav")</script>		
-		<script type="text/javascript">document.createElement("footer")</script>		
+		<script type="text/javascript">document.createElement("footer")</script>
+		<script type="text/javascript">document.createElement("section")</script>
+		<script type="text/javascript">document.createElement("aside")</script>
 	<![endif]-->	
 
 <?php
@@ -77,7 +81,7 @@
 	<!-- The main container of all content -->
 	<div class="fl-container fl-centered">
 
-		<header class="fl-site-header fl-clearfix">
+		<header class="fl-site-header">
 			<!-- Loads the file "banner.php". Feel free to override with your own banner, or with an empty file -->
 			<?php get_template_part('banner') ?>
 
