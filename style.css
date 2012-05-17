@@ -9,14 +9,15 @@ Version: 1.0
     min-width: 800px;
     max-width: 1280px;
 }
-
-.fl-site-logo {
+.fl-site-link a {
     background-repeat: no-repeat;
     background-image: url('images/fluid_66x40_rgb_transparentBkg_bw-PlainBlack.png');
-    width: 66px;
-    height: 40px;
-    display: inline;
-    float: left;
+    display: block;
+    height: 5em;
+}
+.fl-site-link span {
+    position: relative;
+    top: 3.8em;
 }
 .fl-site-skipto a:link, .fl-site-skipto a:visited {
     color: #FFFFFF;

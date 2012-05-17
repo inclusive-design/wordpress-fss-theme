@@ -22,15 +22,19 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/infusion/lib/jquery/ui/css/fl-theme-by/by.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/infusion/lib/jquery/ui/css/fl-theme-yb/yb.css" />	
 
-
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/style-ltie9.css" />
+	<![endif]-->
 
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/infusion/MyInfusion.js"></script>
 
 	<!--[if lte IE 8]>	
 		<script type="text/javascript">document.createElement("header")</script>	
 		<script type="text/javascript">document.createElement("nav")</script>		
-		<script type="text/javascript">document.createElement("footer")</script>		
+		<script type="text/javascript">document.createElement("footer")</script>
+		<script type="text/javascript">document.createElement("section")</script>
+		<script type="text/javascript">document.createElement("aside")</script>
 	<![endif]-->	
 
 <?php
@@ -41,17 +45,7 @@
 
 <body> 
 
-	<!-- begin markup for UI Options Fat Panel -->
-	<div class="flc-uiOptions-fatPanel fl-uiOptions-fatPanel">        
-		<div id="myUIOptions" class="flc-slidingPanel-panel flc-uiOptions-iframe"></div>     
-		
-		<div class="fl-panelBar">
-			<button class="flc-slidingPanel-toggleButton fl-toggleButton">Show/Hide</button>
-		</div>
-	</div>
-	<!-- end markup for UI Options Fat Panel -->
-
-	<?php get_template_part('top-buttons') ?>
+	<?php get_template_part('uio-markup') ?>
 
 	<script type="text/javascript">
 		fluid.pageEnhancer({
@@ -66,8 +60,14 @@
 				options: {
 					strings: {
 						//showText: "Display Settings <img src='<?php bloginfo('template_url'); ?>/images/triangle_down_white.png' alt='down arrow' />",
-						showText: "Show Display Settings",
-						hideText: "Hide Display Settings"
+						<?php global $uio_strings, $uio_strings_custom;
+							// To override the default strings, define $uio_strings_custom
+							//in the child theme's functions.php file
+							if ($uio_strings_custom) {
+								echo $uio_strings_custom;
+							} else {
+								echo $uio_strings; 
+							}?>
 					}
 				}
 			}
@@ -81,7 +81,7 @@
 	<!-- The main container of all content -->
 	<div class="fl-container fl-centered">
 
-		<header class="fl-site-header fl-clearfix">
+		<header class="fl-site-header">
 			<!-- Loads the file "banner.php". Feel free to override with your own banner, or with an empty file -->
 			<?php get_template_part('banner') ?>
 
