@@ -26,6 +26,9 @@
 	<!--[if lte IE 8]>
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/style-ltie9.css" />
 	<![endif]-->
+	<!--[if lt IE 7]>
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/style-ltie7.css" />
+	<![endif]-->
 
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/infusion/MyInfusion.js"></script>
 
