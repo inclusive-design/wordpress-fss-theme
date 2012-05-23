@@ -227,7 +227,7 @@ Layout Helpers
 /* CHANGE TO LAYOUT not COL since this will become a layout helper */
 .fl-col-mixed,
 .fl-col-mixed2,
-.fl-col-mixed3 {overflow:auto; zoom:1;}
+.fl-col-mixed3 {zoom:1;}
 
 /* Old System */
 .fl-col-mixed .fl-col-side {width:200px;}
