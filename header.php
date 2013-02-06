@@ -54,30 +54,34 @@
 	<?php get_template_part('uio-markup') ?>
 
 	<script type="text/javascript">
-		fluid.pageEnhancer({
-			tocTemplate: "<?php bloginfo('template_url'); ?>/infusion/components/tableOfContents/html/TableOfContents.html"
-		});
-	
-		fluid.uiOptions.fatPanel(".flc-uiOptions-fatPanel", {
-			prefix: "<?php bloginfo('template_url'); ?>/infusion/components/uiOptions/html/"	,		
-	
-		  // Provide custom strings for slidingPanel button
-			slidingPanel: {
-				options: {
-					strings: {
-						//showText: "Display Settings <img src='<?php bloginfo('template_url'); ?>/images/triangle_down_white.png' alt='down arrow' />",
-						<?php global $uio_strings, $uio_strings_custom;
-							// To override the default strings, define $uio_strings_custom
-							//in the child theme's functions.php file
-							if ($uio_strings_custom) {
-								echo $uio_strings_custom;
-							} else {
-								echo $uio_strings; 
-							}?>
+		// TODO: need a better test than the mere existance of the function!!
+		if (!fluid.uiOptions.fatPanel.withMediaPanel) {
+			console.log("med panel doesn't exist, instantiating UIO myself'");
+			fluid.pageEnhancer({
+				tocTemplate: "<?php bloginfo('template_url'); ?>/infusion/components/tableOfContents/html/TableOfContents.html"
+			});
+
+			var uiOptions = fluid.uiOptions.fatPanel(".flc-uiOptions-fatPanel", {
+				prefix: "<?php bloginfo('template_url'); ?>/infusion/components/uiOptions/html/",
+
+	          // Provide custom strings for slidingPanel button
+	            slidingPanel: {
+					options: {
+						strings: {
+							//showText: "Display Settings <img src='<?php bloginfo('template_url'); ?>/images/triangle_down_white.png' alt='down arrow' />",
+							<?php global $uio_strings, $uio_strings_custom;
+								// To override the default strings, define $uio_strings_custom
+								//in the child theme's functions.php file
+								if ($uio_strings_custom) {
+									echo $uio_strings_custom;
+								} else {
+									echo $uio_strings;
+								}?>
+						}
 					}
 				}
-			}
-		});          
+	        });
+		}
 	</script>
 
 	<div class="fl-site-skipto fl-hidden-accessible">
