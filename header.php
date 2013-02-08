@@ -54,9 +54,10 @@
 	<?php get_template_part('uio-markup') ?>
 
 	<script type="text/javascript">
+		// If a plugin is present that will be creating an enhanced version of UIO, defer to that
+		// Only instantiate the basic UIO if there is no such plugin
 		// TODO: need a better test than the mere existance of the function!!
 		if (!fluid.uiOptions.fatPanel.withMediaPanel) {
-			console.log("med panel doesn't exist, instantiating UIO myself'");
 			fluid.pageEnhancer({
 				tocTemplate: "<?php bloginfo('template_url'); ?>/infusion/components/tableOfContents/html/TableOfContents.html"
 			});
